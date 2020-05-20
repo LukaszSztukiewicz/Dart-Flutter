@@ -15,13 +15,12 @@ class Home extends StatelessWidget {
       backgroundColor: Color.fromARGB(255, 255, 0, 0),
       ),
     body: Center(
-        child: Image(
-          image: AssetImage('assets/leaves.jpg'),
-          //image: NetworkImage('https://images.pexels.com/photos/3636074/pexels-photo-3636074.jpeg?cs=srgb&dl=jasny-lekki-relaks-niebieski-3636074.jpg&fm=jpg'))
-        )
-        ),
+        
+    ),
     floatingActionButton: FloatingActionButton(
-      onPressed: null,
+      onPressed: (){
+        print("clicked");
+      },
       backgroundColor: Color.fromARGB(255, 255,2, 20),
       child: Text(
         "click",
