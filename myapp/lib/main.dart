@@ -18,7 +18,7 @@ class _MyAppState extends State<MyApp> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Whales meeting"),
-        backgroundColor: Colors.black54,
+        backgroundColor: Colors.black87,
         centerTitle: true,
         //elevation: 0.0, for flat design
       ),
@@ -197,30 +197,20 @@ class SecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black54,
+        backgroundColor: Colors.black,
         centerTitle: true,
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             Text("Sceond Page",
             style: TextStyle(
               color: Colors.white
             ),),
-            IconButton(
-              icon: Icon(
-                Icons.backspace,
-                color: Colors.cyan,
-                ),
-                onPressed: (){
-                  Navigator.pop(context);
-                },
-            )
           ],
         ),
         
       ),
       body: Container(
-        padding: EdgeInsets.all(20),
+      padding: EdgeInsets.all(20),
        color: Colors.black87,
        child: Column(
          children: <Widget>[
