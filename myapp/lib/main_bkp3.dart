@@ -1,18 +1,4 @@
-import 'package:flutter/material.dart';
-
-void main(List<String> args) => runApp(MaterialApp(
-  title: "Lukas App",
-  home: MyApp(),
-));
-
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  List<int> iconNumber = [1,2,3];
-  int _level = 42;
+/*class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +9,6 @@ class _MyAppState extends State<MyApp> {
         //elevation: 0.0, for flat design
       ),
       body: Container(
-        padding: EdgeInsets.all(10),
         color: Colors.black87,
         child: Column(
           children: <Widget>[
@@ -47,7 +32,7 @@ class _MyAppState extends State<MyApp> {
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Icon(Icons.wb_iridescent,color: Colors.cyan),Icon(Icons.wb_iridescent,color: Colors.cyan),Icon(Icons.wb_iridescent,color: Colors.cyan),Icon(Icons.wb_iridescent,color: Colors.cyan),
                   Icon(Icons.wb_iridescent,color: Colors.cyan),Icon(Icons.wb_iridescent,color: Colors.cyan),Icon(Icons.wb_iridescent,color: Colors.cyan),Icon(Icons.wb_iridescent,color: Colors.cyan),
@@ -79,7 +64,7 @@ class _MyAppState extends State<MyApp> {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        "$_level",
+                        "42",
                         style: TextStyle(
                           color: Colors.white,
                            fontSize: 25,
@@ -136,117 +121,11 @@ class _MyAppState extends State<MyApp> {
                   )
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: iconNumber.map((i) {
-                  return IconButton(
-                    icon: Icon(Icons.insert_emoticon, color: Colors.cyan), 
-                    onPressed: (){
-                      setState(() {
-                        iconNumber.add(1);}
-                        );
-                      },
-                    );
-                }).toList()
-                )
-              ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                RaisedButton(
-                  onPressed: (){
-                    setState(() {
-                      _level +=1;
-                    });
-                  },
-                  color: Colors.cyan,
-                  child: Text("Level augmentation", style: TextStyle(color: Colors.white),),
-                ),
-                RaisedButton.icon(
-                  color: Colors.pink,
-                  onPressed: (){
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => SecondPage()),
-                      );
-                  }, 
-                  icon: Icon(
-                    Icons.navigate_next, 
-                    color: Colors.white,
-                    ),
-                  label: Text(
-                    "Next",
-                    style: TextStyle(
-                      color: Colors.white
-                    ),
-                    ),
-                  ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
 
-class SecondPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black54,
-        centerTitle: true,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            Text("Sceond Page",
-            style: TextStyle(
-              color: Colors.white
-            ),),
-            IconButton(
-              icon: Icon(
-                Icons.backspace,
-                color: Colors.cyan,
-                ),
-                onPressed: (){
-                  Navigator.pop(context);
-                },
-            )
+
           ],
         ),
-        
-      ),
-      body: Container(
-        padding: EdgeInsets.all(20),
-       color: Colors.black87,
-       child: Column(
-         children: <Widget>[
-           Center(
-             child: ClipRRect(
-               child: Container(
-                 width: 200,
-                 height: 200,
-                 child: FittedBox(
-                   fit: BoxFit.fill,
-                   child: Image.asset("assets/leaves.jpg")
-                 ),
-               )
-             )
-           ),
-           Padding(
-             padding: const EdgeInsets.all(30.0),
-             child: FloatingActionButton(
-               onPressed: (){Navigator.pop(context);},
-               backgroundColor: Colors.cyan,
-               child: Icon(Icons.offline_bolt, color: Colors.white,)
-               ,),
-           )
-         ],
-       ), 
       ),
     );
   }
-}
+}*/
